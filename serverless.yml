@@ -1,0 +1,28 @@
+service: aws-nodejs-typescript-s3
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128 # optional, in MB, default is 1024
+  timeout: 10 # optional, in seconds, default is 6
+  stage: ${opt:stage, 'dev'}
+  region: sa-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "*"
+
+functions:
+  receiver:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+      
+      
