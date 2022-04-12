@@ -2,10 +2,9 @@ import { formatJSONResponse, ValidatedEventAPIGatewayProxyEvent } from "./api-ga
 import schema from "./schema"
 
 const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
-  return formatJSONResponse({
-   body: `teste`,
-   statusCode: 201
-  })
+  console.log(process.env.MINIFY) 
+  return formatJSONResponse(`Hello, welcome to the exciting Serverless worldddd`,  201)
 }
+
 
 export { hello } 

@@ -3,7 +3,6 @@ service: aws-nodejs-typescript-s3
 plugins:
   - serverless-esbuild
   - serverless-offline
-
 provider:
   name: aws
   runtime: nodejs12.x
@@ -16,6 +15,7 @@ provider:
       Action:
         - s3:*
       Resource: "*"
+  environment: ${file(./src/config/env.${opt:stage, 'dev'}.yml)}
 
 functions:
   receiver:
@@ -25,7 +25,14 @@ functions:
           path: hello
           method: get
       
+
+package: 
+  individually: true
 custom:
   esbuild:
+
     bundle: true
     minify: false
+    watch:
+      pattern: ['src/**/*.ts']
+      ignore: ['temp/**/*']

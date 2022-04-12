@@ -6,7 +6,9 @@
   "author": "Guilherme Barroso",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "sls offline --stage dev",
+    "prod": "sls offline --stage prod",
+    "deploy:production": "sls deploy --stage prod"
   },
   "dependencies": {
     "@types/lambda-log": "^2.2.0",
