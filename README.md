@@ -6,6 +6,8 @@ language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'
 authorName: 'Haiko van der Schaaf'
 -->
-# Serverless S3 Template
+# Serverless Template
 
+credits to 'Haiko van der Schaaf' 
+Rep: 'https://github.com/cyberworkz/serverless-templates'
 
