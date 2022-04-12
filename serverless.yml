@@ -1,7 +1,7 @@
 service: aws-nodejs-typescript-s3
 
 plugins:
-  - serverless-webpack
+  - serverless-esbuild
   - serverless-offline
 
 provider:
@@ -25,4 +25,7 @@ functions:
           path: hello
           method: get
       
-      
+custom:
+  esbuild:
+    bundle: true
+    minify: false
