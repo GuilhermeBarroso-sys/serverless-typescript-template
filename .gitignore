@@ -5,7 +5,8 @@ jspm_packages
 # Serverless directories
 .serverless
 
-# Webpack directories
-.webpack
+#esbuild
+.esbuild
+
 /email-service.iml
 /.idea/

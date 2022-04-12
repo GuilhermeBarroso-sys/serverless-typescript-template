@@ -35,4 +35,3 @@ custom:
     minify: false
     watch:
       pattern: ['src/**/*.ts']
-      ignore: ['temp/**/*']
